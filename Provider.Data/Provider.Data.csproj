@@ -80,6 +80,7 @@
     <Compile Include="PurchaseReturnProducts.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="Stock.cs" />
+    <Compile Include="Support\NotifyUIBase.cs" />
     <Compile Include="Taxes.cs" />
     <Compile Include="Vendor.cs" />
   </ItemGroup>
