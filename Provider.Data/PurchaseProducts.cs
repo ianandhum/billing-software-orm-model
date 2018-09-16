@@ -21,23 +21,23 @@ namespace Provider.Data
 
         public String Description { get; set; }
 
-        public String MU { get; set; }
+        public Measure MU { get; set; }
 
-        public Nullable<Decimal> Price { get; set; }
+        public Decimal Price { get; set; }
 
-        public Nullable<Decimal> Quantity { get; set; }
+        public Decimal Quantity { get; set; }
 
-        public Nullable<int> InclusiveTax { get; set; }
+        public bool InclusiveTax { get; set; }
 
         public int TaxId { get; set; }
 
-        public Nullable<Decimal> TotalNoTax { get; set; }
+        public Decimal TotalNoTax { get; set; }
 
-        public Nullable<Decimal> TotalTax { get; set; }
+        public Decimal TotalTax { get; set; }
 
-        public Nullable<Decimal> Total { get; set; }
+        public Decimal Total { get; set; }
 
-        public int IsDiscount { get; set; }
+        public bool IsDiscount { get; set; }
 
         public Decimal DiscountPercent { get; set; }
 
@@ -46,5 +46,7 @@ namespace Provider.Data
         public Decimal CESSPercent { get; set; }
 
         public Purchase Purchase { get; set; }
+
+        public Taxes Tax { get; set; }
     }
 }

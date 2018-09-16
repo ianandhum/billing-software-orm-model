@@ -27,7 +27,7 @@ namespace Provider.Data
 
         public bool IsPaid { get; set; }
 
-        public Decimal TotalNoTax { get; set; }
+        public Decimal SubTotal { get; set; }
 
         public Decimal TotalTax { get; set; }
 
@@ -40,6 +40,8 @@ namespace Provider.Data
         public bool Deleted { get; set; }
 
         public Decimal Discount { get; set; }
+
+        public Decimal ShippingCharge { get; set; }
 
         public Decimal RoundedOff { get; set; }
 

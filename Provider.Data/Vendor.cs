@@ -5,40 +5,168 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Linq.Mapping;
 using System.ComponentModel.DataAnnotations;
+using Provider.Data.Support;
+
 namespace Provider.Data
 {
-    public class Vendor
+    public class Vendor:NotifyUIBase
     {
         public Vendor()
         {
             this.Purchases = new HashSet<Purchase>();
         }
 
+        private int _VendorId { get; set; }
+
         [Column(IsPrimaryKey = true)]
         [Key]
-        public int VendorId { get; set; }
+        public int VendorId
+        {
+            get
+            {
+                return _VendorId;
+            }
+            set
+            {
+                _VendorId = value;
+                RaisePropertyChanged("VendorId");
 
-        public string Name { get; set; }
+            }
+        }
 
-        public string Email { get; set; }
+        private string _Name;
 
-        public string Telephone { get; set; }
+        public string Name
+        {
+            get { return _Name; }
+            set
+            {
+                _Name = value;
+                RaisePropertyChanged("Name");
+            }
+        }
 
-        public string BillingAddress { get; set; }
+        private string _Email;
 
-        public string BillingZIP { get; set; }
+        public string Email
+        {
+            get { return _Email; }
+            set
+            {
+                _Email = value;
+                RaisePropertyChanged("Email");
+            }
+        }
 
-        public string BillingCity { get; set; }
+        private string _Telephone;
 
-        public string ShippingAddress { get; set; }
+        public string Telephone
+        {
+            get { return _Telephone; }
+            set
+            {
+                _Telephone = value;
+                RaisePropertyChanged("Telephone");
+            }
+        }
 
-        public string ShippingZIP { get; set; }
+        private string _BillingAddress;
 
-        public string ShippingCity { get; set; }
+        public string BillingAddress
+        {
+            get { return _BillingAddress; }
+            set
+            {
+                _BillingAddress = value;
+                RaisePropertyChanged("BillingAddress");
+            }
+        }
 
-        public string Details { get; set; }
+        private string _BillingZIP;
 
-        public string GSTIN { get; set; }
+        public string BillingZIP
+        {
+            get { return _BillingZIP; }
+            set
+            {
+                _BillingZIP = value;
+                RaisePropertyChanged("BillingZIP");
+            }
+        }
+
+        private string _BillingCity;
+
+        public string BillingCity
+        {
+            get { return _BillingCity; }
+            set
+            {
+                _BillingCity = value;
+                RaisePropertyChanged("BillingCity");
+            }
+        }
+
+
+        private string _ShippingAddress;
+
+        public string ShippingAddress
+        {
+            get { return _ShippingAddress; }
+            set
+            {
+                _ShippingAddress = value;
+                RaisePropertyChanged("ShippingAddress");
+            }
+        }
+
+        private string _ShippingZIP;
+
+        public string ShippingZIP
+        {
+            get { return _ShippingZIP; }
+            set
+            {
+                _ShippingZIP = value;
+                RaisePropertyChanged("ShippingZIP");
+            }
+        }
+
+        private string _ShippingCity;
+
+        public string ShippingCity
+        {
+            get { return _ShippingCity; }
+            set
+            {
+                _ShippingCity = value;
+                RaisePropertyChanged("ShippingCity");
+            }
+        }
+
+        private string _Details;
+
+        public string Details
+        {
+            get { return _Details; }
+            set
+            {
+                _Details = value;
+                RaisePropertyChanged("Details");
+            }
+        }
+
+        private string _GSTIN;
+
+        public string GSTIN
+        {
+            get { return _GSTIN; }
+            set
+            {
+                _GSTIN = value;
+                RaisePropertyChanged("GSTIN");
+            }
+        }
+
 
         public virtual ICollection<Purchase> Purchases { get; set; }
 

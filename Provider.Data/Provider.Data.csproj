@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Client.cs" />
+    <Compile Include="CompanyInfo.cs" />
     <Compile Include="CreditNote.cs" />
     <Compile Include="CreditNoteProducts.cs" />
     <Compile Include="DataConfiguration.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="Invoice.cs" />
     <Compile Include="InvoicePayments.cs" />
     <Compile Include="InvoiceProducts.cs" />
+    <Compile Include="Support\MetaData.cs" />
     <Compile Include="Payment.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

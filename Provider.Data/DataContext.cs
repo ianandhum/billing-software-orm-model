@@ -61,9 +61,19 @@ namespace Provider.Data
 
         public DbSet<CreditNote> CreditNotes { get; set; }
 
+        public DbSet<CompanyInfo> CompanyInfo { get; set; }
+
         public DbSet<Settings> Settings { get; set; }
         public DbSet<PurchaseReturn> PurchaseReturns { get; set; }
         public DbSet<Taxes> Taxes { get; set; }
+
+
+        // Non direct members
+        //BUG Remove product from invoice and pruchase order
+
+        public DbSet<InvoiceProducts> InvoiceProducts { get; set; }
+
+        public DbSet<PurchaseProducts> PurchaseProducts { get; set; }
 
 
 
